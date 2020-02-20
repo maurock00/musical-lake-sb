@@ -1,0 +1,27 @@
+{
+  "name": "musical-lake-sb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "8.6.2",
+    "typescript": "3.7.5"
+  },
+  "dependencies": {
+    "@types/express": "4.17.2",
+    "@types/node": "13.7.4",
+    "express": "4.17.1",
+    "inversify": "5.0.1",
+    "inversify-express-utils": "6.3.2",
+    "nodemon": "2.0.2",
+    "reflect-metadata": "0.1.13"
+  }
+}
