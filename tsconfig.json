@@ -9,7 +9,7 @@
     "rootDir": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["reflect-metadata"],
+    "types": ["reflect-metadata", "mocha"],
     "lib": [
       "es2018"
     ]
