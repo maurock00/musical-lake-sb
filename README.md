@@ -9,4 +9,10 @@
 
 “Simplicity is the soul of efficiency.” – Austin Freeman
 
+API
+
+- /api/music/:sound -> retrieves reamining sounds given an initial sound.
+
+
+
 Author: maurock00
