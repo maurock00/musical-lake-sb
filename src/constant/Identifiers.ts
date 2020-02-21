@@ -1,6 +1,5 @@
 const IDENTIFIERS = {
-    IMusicalLakeService: Symbol('IMusicalLakeService'),
-    IAnimal: Symbol('IAnimal'),
+    IMusicalLakeService: Symbol('IMusicalLakeService')
 };
 
 export default IDENTIFIERS;

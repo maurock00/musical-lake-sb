@@ -1,3 +1,3 @@
 export interface IMusicalLakeService {
-    findAll(): string | undefined
+    getRemainingSounds(sound: string): string;
 }

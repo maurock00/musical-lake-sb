@@ -1,21 +1,21 @@
+import "reflect-metadata";
 import {IMusicalLakeService} from "../repository/IMusicalLakeService";
-import {inject, injectable} from "inversify";
-import {Animal} from "./Animal";
-import IDENTIFIERS from "../constant/Identifiers";
-import {IAnimal} from "../repository/IAnimal";
+import {injectable} from "inversify";
+import SONGS from "../constant/Songs";
+import {SoundEnum} from "../infrastructure/SoundsEnum";
 
 @injectable()
 export class MusicalLakeService implements IMusicalLakeService{
+    getRemainingSounds(sound: string): string{
+        const songs: string[][] = SONGS;
+        const searchedSong: string[] = songs.filter((x: string[]) => x.includes(sound))[0];
 
-    private _animal: Animal;
+        if(searchedSong && sound !== SoundEnum.BRRAH){
+            const indexOfCoincidence: number = searchedSong.indexOf(sound);
 
-    constructor(
-        @inject(IDENTIFIERS.IAnimal) animal: IAnimal
-    ){
-        this._animal = animal;
-    }
+            return searchedSong.slice(indexOfCoincidence + 1, searchedSong.length).join(", ");
+        }
 
-    findAll(): string | undefined {
-        return this._animal.getAnimalBySound("ALAL");
+        return "";
     }
 }
